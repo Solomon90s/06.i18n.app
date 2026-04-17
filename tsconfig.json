@@ -3,6 +3,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@components/*": ["./src/app/components/*"],
+      "@pages/*": ["./src/app/pages/*"]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

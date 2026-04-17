@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+
+  p {
+    @apply text-pretty;
+  }
+
+  h1,
+  h2 {
+    @apply text-balance;
+  }
+}
