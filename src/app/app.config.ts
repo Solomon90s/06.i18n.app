@@ -6,11 +6,15 @@ import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
+import { SsrCookieService } from 'ngx-cookie-service-ssr';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withViewTransitions()),
     provideClientHydration(withEventReplay()),
+
+    // Cookies
+    SsrCookieService,
   ],
 };

@@ -1,6 +1,7 @@
+<p>Language Selector</p>
 <section class="mx-5 mt-10">
-  <p>Language Selector</p>
   <select
+    (change)="changeLanguages($event)"
     class="my-1.5 flex w-32 cursor-pointer rounded-lg bg-gray-900 p-1.5 focus:ring-2"
   >
     @for (language of languages(); track $index) {
