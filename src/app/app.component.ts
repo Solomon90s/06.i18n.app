@@ -15,11 +15,11 @@ export class AppComponent {
   private cookie: SsrCookieService = inject(SsrCookieService);
   private languageService: LanguageService = inject(LanguageService);
 
-  cookieLogEffect = effect(() => {
+  constructor() {
     console.log({ cookie: this.cookie.get('language') });
     const lang = this.cookie.check('lang')
       ? this.cookie.get('lang')
       : 'Spanish';
     this.languageService.changeLanguage(lang);
-  });
+  }
 }
