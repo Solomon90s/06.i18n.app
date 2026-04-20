@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { LanguageService } from '@services/language.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { LanguageService } from '@services/language.service';
 })
 export class LanguageSelector {
   private languageService: LanguageService = inject(LanguageService);
+  public currentLang: WritableSignal<string> = this.languageService.currentLang;
 
   public languages = signal([
     { code: 'English' },
